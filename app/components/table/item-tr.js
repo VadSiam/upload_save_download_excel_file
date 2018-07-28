@@ -2,13 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import WrapTD from './wrap-td';
 
-const ItemTR = ({ data, cols }) =>
-  data.map(row => (
-    // actually we  need to use unique key like id
-    <tr key={Math.random()}>
-      <ItemTD cols={cols} row={row} />
-    </tr>
-  ));
+const ItemTR = ({ data, cols }) => (
+  <tbody>
+    {data.map(row => (
+      // actually we  need to use unique key like id
+      <tr key={Math.random()}>
+        <ItemTD cols={cols} row={row} />
+      </tr>
+    ))}
+  </tbody>
+);
 
 export default ItemTR;
 

@@ -5,9 +5,9 @@ import ItemTR from './item-tr';
 
 const OutTable = ({ data, cols }) => (
   <WrapTable>
-    <tbody>
-      <ItemTR data={data} cols={cols} />
-    </tbody>
+    {/* <tbody> */}
+    <ItemTR data={data} cols={cols} />
+    {/* </tbody> */}
   </WrapTable>
 );
 

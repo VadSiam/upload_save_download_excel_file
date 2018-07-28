@@ -1,4 +1,3 @@
-// /* eslint-disable */
 import React from 'react';
 import * as XLSX from 'xlsx';
 import OutTable from '../../components/table';
@@ -12,6 +11,7 @@ import {
   onExportFile,
   getLocalStorageKey,
   getItemByKey,
+  getLocalStorageLength,
 } from '../../helpers';
 
 export default class HomePage extends React.PureComponent {
@@ -92,7 +92,7 @@ export default class HomePage extends React.PureComponent {
     // Do something action to send file to outside server API
   };
 
-  checkLocalStorage = () => this.setState({ count: localStorage.length });
+  checkLocalStorage = () => this.setState({ count: getLocalStorageLength() });
 
   render() {
     const { data, cols, open, count } = this.state;

@@ -24,4 +24,6 @@ export const onExportFile = ({ data, name }) => {
 
 export const getLocalStorageKey = () => localStorage.key(0);
 
+export const getLocalStorageLength = () => localStorage.length;
+
 export const getItemByKey = key => JSON.parse(localStorage.getItem(key));
